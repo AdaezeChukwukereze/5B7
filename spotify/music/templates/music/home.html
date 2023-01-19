@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'music/music.css' %}">
+</head>
+<body>
+    <h1> This is my spotify!!!</h1>
+    <h2>Albums</h2>
+    {% for album in albums %}
+    {{ album.name }} - {{ album.genre}}
+    {% endfor%}
+
+    <h2>Songs</h2>
+    {% for song in songs %}
+    {{ song.name }} - {{ song.genre}}
+    {% endfor%}
+
+</body>
+</html>
